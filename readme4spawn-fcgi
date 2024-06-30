@@ -1,0 +1,22 @@
+spawn-fcgi 简介:
+	spawn-fcgi 是一个非常简单的fastcgi 标准的响应server, 主要复杂的任务是: 
+		* 直接运行被选中的文件, 将执行结果通过stdout直接返回给http proxy;
+			(可能会被改造成木马, 上传可执行文件, 执行即可秒控制server, 老式的软件可能没有那么多安全保护的);
+		* 跨平台支持win/unix;
+		* 是lighthttp 的一部分源码;
+		* spawn-fcgi 只是一个fastcgi server, 如果你需要编写c/c++ fastcgi 标准的*.exe, 即被spawn-fcgi 调用的对象, 你还需要fastcgi库;
+
+
+
+
+spawn-fcgi 源码分析
+	* 使用select 多路复用, 通用行很强, 轻松跨平台;
+	* 代码不多, 就一个spawn-fcgi.c, 但c 语言的代码逻辑比较复杂;
+	* 跨平台编译配套很多, autoconf/cmake 都有, 支持unix/win 平台(没有改动的必要);
+	* 跨平台后台daemon shell 配套很多, 支持unix/win 平台(没有改动的必要);
+
+
+
+spawn-fcgi 改进:
+	* 已做逻辑深度优化, 会比原版稍微好一点;
+	* 可阅读格式化(逻辑改动不大)
