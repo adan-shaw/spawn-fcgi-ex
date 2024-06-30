@@ -4,3 +4,4 @@
 *.a
 *.exe
 spawn-fcgi
+./build
