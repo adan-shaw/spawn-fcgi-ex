@@ -5,7 +5,7 @@ spawn-fcgi 简介:
 		* 跨平台支持win/unix;
 		* 是lighthttp 的一部分源码;
 		* spawn-fcgi 只是一个fastcgi server, 如果你需要编写c/c++ fastcgi 标准的*.exe, 即被spawn-fcgi 调用的对象, 你还需要fastcgi库;
-
+		* spawn-fcgi 最后一个版本是spawn-fcgi 1.6.4 -- 2014 年
 
 
 
